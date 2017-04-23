@@ -8,36 +8,46 @@ Minimal working application template for Flask projects.
 
 1. Clone this `template-flask` directory and rename it, e.g. `flaskproject`. Also rename the `flaskproject/yourapp` and `flaskproject/yourapp/yourapp` folders, for instance `flaskapp`.
 
-2. Using your favorite text editor's find/replace functionality on the whole `flaskproject` directory with case sensitivity enabled, replace occurences of `yourapp` and `YOURAPP` with `flaskapp` and `FLASKAPP` respectively.
+2. Create the virtual environment and install the dependencies:
+```
+$ virtualenv env
+$ pip install -r requirements.txt
+```
 
-3. After activating your `env`, you can `pip install -e flaskapp`.
+2. Using your favorite text editor's find/replace functionality on the whole `flaskproject` directory with case sensitivity enabled, replace occurences of `yourapp` and `YOURAPP` with `flaskapp` and `FLASKAPP` respectively.
 
 ### Running your application
 
-1. Define the `FLASK_APP` environment variable: `export FLASK_APP=flaskapp`
-2. `flask run`.
-
-You may then open your favorite web browser at `localhost:5000` and see a "Hello World!" web page: if so, everything worked as expected !
+Simply run the `run.py` file in the package while in t: `python3 flaskapp/run.py`
 
 ## Contents
 
-### Directory structure
+### Project structure
 
 ```
 yourapp
+├── config.py
+├── instance
+│   └── config.py
+├── run.py
 ├── setup.py
 └── yourapp
     ├── __init__.py
+    ├── main
+    │   ├── __init__.py
+    │   ├── static
+    │   ├── templates
+    │   │   └── index.html
+    │   └── views.py
     ├── static
-    │   └── style.css
-    ├── template
-    │   └── index.html
-    └── views.py
+    │   ├── css
+    │   │   └── style.css
+    │   ├── fonts
+    │   └── js
+    └── templates
+        └── layout.html
 ```
 
-### Default files & details
+### Blueprints
 
-- `yourapp/static`: folder for your static files, containing an empty `style.css` CSS file.
-- `yourapp/template/index.html`: HTML template that loads Bootstrap and jQuery for your application as well as the default CSS custom style.
-- `yourapp/views.py`: views file containing a boilerplate "Hello World!" index view.
-- `setup.py` defines the `setuptools` configuration file used when installing your application inside your `virtualenv`.
+This template default a default blueprint called `main`. To see how to use blueprints in Flask applications, see some [tutorials](https://exploreflask.com/en/latest/blueprints.html). This template project uses **divisional organization** of blueprints.
