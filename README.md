@@ -20,6 +20,7 @@ $ pip install -r requirements.txt
 
 Simply run the `run.py` file in the package while in t: `python3 flaskapp/run.py`
 
+
 ## Contents
 
 ### Project structure
@@ -51,3 +52,11 @@ yourapp
 ### Blueprints
 
 This template default a default blueprint called `main`. To see how to use blueprints in Flask applications, see some [tutorials](https://exploreflask.com/en/latest/blueprints.html). This template project uses **divisional organization** of blueprints.
+
+### Database management
+
+Database backend is offered through SQLAlchemy. Migrations are handled with Alembic (see [ExploreFlask](https://exploreflask.com/en/latest/storing.html) for details).
+
+## References
+
+This template project structure and contents are inspired by the [ExploreFlask](https://exploreflask.com/en/latest/) tutorials.
