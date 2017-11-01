@@ -1,4 +1,4 @@
-"""Forms for yourapp."""
+"""Forms for {{cookiecutter.project_slug}}."""
 
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField
