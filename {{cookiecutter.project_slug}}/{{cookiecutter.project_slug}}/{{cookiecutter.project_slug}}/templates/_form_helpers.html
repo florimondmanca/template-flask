@@ -1,3 +1,5 @@
+{% raw %}
+
 {% macro render_field(field) %}
   <div class="form-group {{ kwargs['group_class'] }}">
     {% if field.errors %}
@@ -11,3 +13,5 @@
     {{ field(**kwargs)|safe }}
   </div>
 {% endmacro %}
+
+{% endraw %}
