@@ -1,7 +1,6 @@
-from . import db
+"""Models for yourapp."""
+
+from .app import db
 
 
-class Engine(db.Model):
-    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    title = db.Column(db.String(128))
-    thrust = db.Column(db.Integer, default=0)
+# Define your SQLAlchemy models here

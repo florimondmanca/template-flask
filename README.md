@@ -6,19 +6,22 @@ Minimal working application template for Flask projects.
 
 ### Using the template project
 
-1. Clone this `template-flask` directory and rename it, e.g. `flaskproject`. Also rename the `flaskproject/yourapp` and `flaskproject/yourapp/yourapp` folders, for instance `flaskapp`.
+1. Clone this repo in your project folder, e.g. `flaskproject`. Also rename the `flaskproject/yourapp` and `flaskproject/yourapp/yourapp` folders, for instance `flaskapp`.
 
 2. Create the virtual environment and install the dependencies:
 ```
 $ virtualenv env
-$ pip install -r requirements.txt
+$ source env/bin/activate
+(env) $ pip install -r requirements.txt
 ```
 
 2. Using your favorite text editor's find/replace functionality on the whole `flaskproject` directory with case sensitivity enabled, replace occurences of `yourapp` and `YOURAPP` with `flaskapp` and `FLASKAPP` respectively.
 
 ### Running your application
 
-Simply run the `run.py` file in the package while in t: `python3 flaskapp/run.py`
+```
+flaskproject $ python3 flaskapp/run.py
+```
 
 
 ## Contents
