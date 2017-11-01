@@ -15,7 +15,9 @@ $ source env/bin/activate
 (env) $ pip install -r requirements.txt
 ```
 
-2. Using your favorite text editor's find/replace functionality on the whole `flaskproject` directory with case sensitivity enabled, replace occurences of `yourapp` and `YOURAPP` with `flaskapp` and `FLASKAPP` respectively.
+3. Using your favorite text editor's find/replace functionality on the whole `flaskproject` directory with case sensitivity enabled, replace occurences of `yourapp` and `YOURAPP` with `flaskapp` and `FLASKAPP` respectively.
+
+> Steps 2. and 3 will hopefully soon be automated.
 
 ### Running your application
 
@@ -31,35 +33,38 @@ flaskproject $ python3 flaskapp/run.py
 ```
 yourapp
 ├── config.py
-├── instance
-│   └── config.py
 ├── run.py
 ├── setup.py
 └── yourapp
     ├── __init__.py
-    ├── main
-    │   ├── __init__.py
-    │   ├── static
-    │   ├── templates
-    │   │   └── index.html
-    │   └── views.py
+    ├── app.py
+    ├── views.py
+    ├── models.py
+    ├── forms.py
     ├── static
-    │   ├── css
-    │   │   └── style.css
-    │   ├── fonts
-    │   └── js
+    │   └── css
+    │       └── style.css
     └── templates
-        └── layout.html
 ```
 
-### Blueprints
+### Included extensions
 
-This template default a default blueprint called `main`. To see how to use blueprints in Flask applications, see some [tutorials](https://exploreflask.com/en/latest/blueprints.html). This template project uses **divisional organization** of blueprints.
+This template project includes the following Flask extensions :
 
-### Database management
+- [Flask-SQLAlchemy](http://flask-sqlalchemy.pocoo.org/2.3/) for the database backend
+- [Flask-Migrate](https://flask-migrate.readthedocs.io/en/latest/) for migrations.
+- [Flask-WTForms](https://flask-wtf.readthedocs.io/en/stable/) for forms management.
 
-Database backend is offered through SQLAlchemy. Migrations are handled with Alembic (see [ExploreFlask](https://exploreflask.com/en/latest/storing.html) for details).
+### Included templates
+
+The templates inside `yourapp/templates` include :
+
+- a `base.html` template using Bootstrap 4 and declaring a few template blocks: `title`, `stylesheets`, `scripts`, `nav`, `content`
+- an example `nav.html`
+- two example view templates: `index.html`, `login.html`
+- a `_form_helpers.html` file containing useful helpers for use with Flask-WTF
+
 
 ## References
 
-This template project structure and contents are inspired by the [ExploreFlask](https://exploreflask.com/en/latest/) tutorials.
+This template project structure and contents was originally inspired by the [ExploreFlask](https://exploreflask.com/en/latest/) tutorials.
