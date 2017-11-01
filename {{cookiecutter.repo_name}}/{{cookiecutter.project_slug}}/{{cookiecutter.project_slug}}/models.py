@@ -1,4 +1,4 @@
-"""Models for yourapp."""
+"""Models for {{cookiecutter.project_slug}}."""
 
 from .app import db
 

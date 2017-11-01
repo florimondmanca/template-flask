@@ -1,4 +1,4 @@
-"""Configuration for yourapp."""
+"""Configuration for {{cookiecutter.project_slug}}."""
 
 DEBUG = False
 SQLALCHEMY_TRACK_MODIFICATIONS = True

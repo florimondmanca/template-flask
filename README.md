@@ -1,41 +1,51 @@
 # Flask application template
 
-Minimal working application template for Flask projects.
+Minimal application template for Flask projects.
 
 ## Usage
 
 ### Using the template project
 
-1. Clone this repo in your project folder, e.g. `flaskproject`. Also rename the `flaskproject/yourapp` and `flaskproject/yourapp/yourapp` folders, for instance `flaskapp`.
+1. Make sure you've got [`cookiecutter`](http://cookiecutter.readthedocs.io/en/latest/installation.html) installed.
 
-2. Create the virtual environment and install the dependencies:
+2. Cut the cookie:
+
 ```
-$ virtualenv env
-$ source env/bin/activate
-(env) $ pip install -r requirements.txt
+$ cookiecutter https://github.com/florimondmanca/template-flask/
 ```
 
-3. Using your favorite text editor's find/replace functionality on the whole `flaskproject` directory with case sensitivity enabled, replace occurences of `yourapp` and `YOURAPP` with `flaskapp` and `FLASKAPP` respectively.
+This will ask for a few details (name, email, project name, project short description, etc...).
 
-> Steps 2. and 3 will hopefully soon be automated.
+3. `cd` to your newly generated project.
+
+4. Create the virtual environment and install the dependencies (`$ pip install -r requirements.txt`).
+
 
 ### Running your application
 
+For the sake of example, say you created `mysite` project called `mysite`.
+
+Option 1 : use the `run.py` script located in `mysite`.
+
 ```
-flaskproject $ python3 flaskapp/run.py
+mysite $ python mysite/run.py
 ```
 
+Option 2 : `mysite` contains a `__main__.py` file so you can run directly.
 
-## Contents
+```
+mysite $ python mysite
+```
+
 
 ### Project structure
 
 ```
-yourapp
+mysite
 ├── config.py
 ├── run.py
 ├── setup.py
-└── yourapp
+└── mysite
     ├── __init__.py
     ├── app.py
     ├── views.py

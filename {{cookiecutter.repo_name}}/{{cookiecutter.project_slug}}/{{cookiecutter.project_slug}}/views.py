@@ -1,4 +1,4 @@
-"""Views for yourapp."""
+"""Views for {{cookiecutter.project_slug}}."""
 
 from flask import render_template, redirect, url_for, request
 from .app import app
